@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(4, 61, 61);
+  font-family: Ubuntu, Roboto, sans-serif;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+h2 {
+  color: azure;
+}
+
+.container {
+  color: white;
+  padding: 100px 200px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #ffcfdf;
+  background-image: linear-gradient(315deg, #cf9c0f 0%, #829e9d 74%);
+  box-shadow: -0.1em -0.1em 0.3em rgba(0, 232, 248, 0.432),
+    0.1em 0.1em 0.3em rgba(248, 149, 0, 0.575);
+  transform: translateX(-400%);
+  transition: transform 0.4s ease-in;
+}
+
+.container:nth-of-type(even) {
+  transform: translateX(400%);
+  transition: 0.4s ease-in;
+}
+
+.container.show {
+  transform: translateX(0%);
+  transition: 0.4s ease-in;
+}
